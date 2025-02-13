@@ -1,0 +1,52 @@
+@use 'variables';
+@use 'utilities'; 
+@use 'sass:map';
+
+// Ordered Lists 
+ol {
+    list-style-type: none; 
+    counter-reset: li;
+    padding-left: 0;
+}
+
+ol li {
+    position: relative;
+    padding-left: 3rem;
+    color: black;
+
+    &:before {
+        counter-increment: li;
+        content: counter(li, decimal-leading-zero); 
+        color: map.get(variables.$theme, "primary"); 
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+// Unordered Lists 
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 3rem;
+
+    &::before {
+        content: "";
+        display: block;
+        width: variables.$notto-ul-bullet-size;
+        height: variables.$notto-ul-bullet-size;
+        border-radius: 50%; 
+        background: linear-gradient(#{variables.$notto-ul-gradient-angle}, 
+                  map.get(variables.$theme, "primary"), 
+                  map.get(variables.$theme, "secondary")); 
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

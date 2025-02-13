@@ -1,0 +1,63 @@
+@use 'variables';
+@use 'utilities'; 
+@use 'sass:map';
+
+// Reusable Gradient 
+@mixin notto-gradient($color, $angle: 135deg) {
+    background: linear-gradient($angle, rgba($color, 0.8), rgba($color, 0.6));
+}
+
+// Notto Form 
+.notto-form {
+    max-width: 500px;
+    margin: 0;
+    padding: 2rem;
+    color: map.get(variables.$theme, "dark");
+
+    @extend .notto-border; 
+    @extend .notto-border-radius !optional;
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    input[type="text"], 
+    input[type="email"], 
+    textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 1rem;
+        background: rgba(map.get(variables.$theme, "primary"), 0.05);
+        border: 1px solid rgba(map.get(variables.$theme, "primary"), 0.2);
+        border-radius: 6px;
+        color: map.get(variables.$theme, "dark");
+        transition: all 0.3s ease;
+
+        &::placeholder {
+            color: rgba(map.get(variables.$theme, "dark"), 0.5);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(map.get(variables.$theme, "primary"), 0.5);
+        }
+    }
+
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    // Responsive Adjustments
+    @media (max-width: 480px) {
+        padding: 1rem;
+
+        input,
+        textarea,
+        .notto-button {
+            font-size: 16px;
+        }
+    }
+}

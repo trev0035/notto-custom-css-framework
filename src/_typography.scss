@@ -1,0 +1,55 @@
+@use 'variables' as *;
+@use 'notto-font-body';
+@use 'notto-font-heading';
+@use 'sass:map';
+@use 'sass:color';
+
+// Body Text
+body {
+    font-family: $notto-font-body;
+    font-weight: $font-regular;
+    font-size: $font-body;
+    line-height: 1.5;
+    color: map.get($theme, "dark");
+}
+
+// Headings
+h1, h2, h3, h4 {
+    font-family: $notto-font-heading;
+}
+
+h1 {
+    font-size: $font-h1;
+    font-weight: $font-regular;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: $font-h2;
+    font-weight: $font-regular;
+    line-height: 1.3;
+    margin-bottom: 0.9rem;
+}
+
+h3 {
+    font-size: $font-h3;
+    font-weight: $font-regular;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+}
+
+h4 {
+    font-size: $font-h4;
+    font-weight: $font-regular;
+    line-height: 1.4;
+    margin-bottom: 0.7rem;
+}
+
+// Paragraph 
+p {
+    font-size: $font-body;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+

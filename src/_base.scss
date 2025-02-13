@@ -1,0 +1,25 @@
+@use 'sass:map';
+@use 'variables';
+@use 'buttons';
+@use 'lists';
+@use 'forms';
+@use 'tables';
+@use 'utilities';
+
+
+// Container
+.container {
+    max-width: 1140px;
+    margin: 0 auto; 
+}
+
+body{
+    padding-top: 80px; 
+}
+
+//links
+a {
+    text-decoration: underline;
+    color: map.get(variables.$theme, "primary");
+}
+

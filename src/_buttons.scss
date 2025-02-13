@@ -1,0 +1,75 @@
+@use 'variables';
+@use 'utilities'; 
+@use 'sass:map';
+@use 'sass:color';
+
+// Notto Button 
+@mixin notto-btn(
+  $btn-bg-color: null, 
+  $btn-text-color: null, 
+  $gradient-angle: 135deg, 
+  $border-radius: 20px, 
+  $padding: 5px 15px
+) {
+  //default values - for errors
+  $btn-bg-color: if($btn-bg-color == null, map.get(variables.$theme, "primary"), $btn-bg-color);
+  $btn-text-color: if($btn-text-color == null, map.get(variables.$theme, "light"), $btn-text-color);
+
+  background: linear-gradient(
+    $gradient-angle, 
+    color.adjust($btn-bg-color, $lightness: 10%), 
+    color.adjust($btn-bg-color, $lightness: -10%)
+  );
+  color: $btn-text-color;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  font-family: variables.$notto-font-body;
+  font-weight: variables.$font-bold;
+  border-radius: $border-radius;
+  padding: $padding;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(
+      $gradient-angle, 
+      color.adjust($btn-bg-color, $lightness: -5%), 
+      color.adjust($btn-bg-color, $lightness: 5%)
+    );
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+}
+
+button, 
+button.btn.notto-button-primary, 
+a.btn.notto-button-primary {
+  @include notto-btn();
+}
+
+// Variants
+button.btn.notto-button-secondary {
+  @include notto-btn(map.get(variables.$theme, "secondary"));
+}
+
+button.btn.notto-button-success {
+  @include notto-btn(map.get(variables.$theme, "success"));
+}
+
+button.btn.notto-button-info {
+  @include notto-btn(map.get(variables.$theme, "info"));
+}
+
+button.btn.notto-button-warning {
+  @include notto-btn(map.get(variables.$theme, "warning"));
+}
+
+button.btn.notto-button-danger {
+  @include notto-btn(map.get(variables.$theme, "danger"));
+}
+

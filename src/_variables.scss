@@ -1,0 +1,50 @@
+// COLORS
+$indigo: #1F51FF;
+$navy: #2e03ba;
+$purple: #7e69d1;
+$success: #28a745;
+$warning: #c59504;
+$info: #c0446d;
+$danger: #af1625;
+$light: #ffffff;
+$dark: #000000;
+$grey: #c9cff6;
+
+// THEME MAP
+$theme: (
+  "primary": $indigo,
+  "secondary": $purple,
+  "tertiary": $navy,
+  "success": $success,
+  "warning": $warning,
+  "info": $info,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "inactive": $grey
+);
+
+// TYPOGRAPHY
+$notto-font-body: "Bai Jamjuree", serif;
+$notto-font-heading: "Anton", serif;
+
+// FONT WEIGHT
+$font-regular: 400;
+$font-bold: 600;
+
+// FONT SIZE
+$font-body: 18px;
+$font-h1: 55px;
+$font-h2: 45px;
+$font-h3: 36px;
+$font-h4: 28px;
+$font-small: 14px;
+
+// BASE STYLES - LISTS
+$notto-ol-style: decimal-leading-zero;
+$notto-ul-bullet-size: 12px;
+$notto-ul-gradient-angle: 45deg;
+
+
+
+  

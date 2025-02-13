@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notto Framework Demo</title>
+  <link rel="stylesheet" href="css/notto.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Demo Nav -->
+  <nav class="notto-navbar">
+    <ul class="notto-nav-list">
+      <li><a href="#headings">Headings</a></li>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#forms">Forms</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#borders">Borders & Radius</a></li>
+      <li><a href="#spacing">Spacing</a></li>
+      <li><a href="#images">Images</a></li>
+
+    </ul>
+  </nav>
+
+  <header>
+        <h1 class="notto-font-heading notto-heading-gradient">NottoCSS Framework</h1>
+        <section>
+        <p class="notto-font-body"> NottoCSS is a customizable CSS framework built with Sass to help create modern, responsive, and colorful web interfaces with facility.</p>
+        <p>Created by <strong>Regina Trevs</strong> | GitHub: <a href="https://github.com/trev0035" target="_blank">trev0035</a></p>
+        <button class="btn notto-button-primary" onclick="window.open('https://github.com/trev0035', '_blank')">View on GitHub</button>
+        </section>
+      </header>
+
+  <!-- Headings -->
+<section id="headings">
+  <h2 class="notto-heading-gradient">Headings</h2>
+  <h1 class="notto-font-heading">Heading 1</h1>
+  <h2 class="notto-font-heading">Heading 2</h2>
+  <h3 class="notto-font-heading">Heading 3</h3>
+  <h4 class="notto-font-heading">Heading 4</h4>
+  <p class="notto-font-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</section>
+
+
+  <!-- Unordered List -->
+  <section id="lists">
+    <h2 class="notto-heading-gradient">Lists</h2>
+    <h3>Unordered List</h3>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <!-- Ordered List -->
+    <h3>Ordered List</h3>
+    <ol>
+      <li>First Item</li>
+      <li>Second Item</li>
+      <li>Third Item</li>
+    </ol>
+  </section>
+
+  <!-- Buttons -->
+  <section id="buttons">
+    <h2 class="notto-heading-gradient">Notto Buttons</h2>
+    <button class="btn notto-button-primary">Primary Button</button>
+    <button class="btn notto-button-secondary">Secondary Button</button>
+    <button class="btn notto-button-success">Success Button</button>
+    <button class="btn notto-button-info">Info Button</button>
+    <button class="btn notto-button-warning">Warning Button</button>
+    <button class="btn notto-button-danger">Danger Button</button>
+    
+    <!-- Fix this line -->
+    <a href="#"> This is a Link</a>
+  </section>
+  
+
+  <!-- Forms & Inputs -->
+  <section id="forms">
+    <h2 class="notto-heading-gradient">Forms</h2>
+    <form class="notto-form notto-radius-md notto-border-glow ">
+      <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+        <button type="submit" class="notto-button">Submit</button>
+      </fieldset>
+    </form>
+  </section>
+  
+  
+  <!-- Tables -->
+  <section id="tables">
+    <h2 class="notto-heading-gradient">Notto Tables</h2>
+    <h3>Basic Notto Table</h3> 
+    <table class="notto-table notto-radius-md">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+            <tr>
+                <td>Data 3</td>
+                <td>Data 4</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h3>Bordered Notto Table</h3>
+    <table class="notto-table notto-table-bordered notto-radius-md">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+            <tr>
+                <td>Data 3</td>
+                <td>Data 4</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h3>Striped Notto Table</h3>
+    <table class="notto-table notto-table-striped notto-radius-md">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+            <tr>
+                <td>Data 3</td>
+                <td>Data 4</td>
+            </tr>
+            <tr>
+                <td>Data 5</td>
+                <td>Data 6</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+  <!-- Utility Classes -->
+  <h2 class="notto-heading-gradient">Utility Classes</h2>
+
+  <!-- Borders Section -->
+<section id="borders">
+  <h3>Borders</h3>
+  <div class="notto-m-3 notto-p-3 notto-border">Default Border</div>
+  <div class="notto-m-3 notto-p-3 notto-border-primary">Primary Border</div>
+  <div class="notto-m-3 notto-p-3 notto-border-secondary">Secondary Border</div>
+  <div class="notto-m-3 notto-p-3 notto-border-info">Info Border</div>
+  <div class="notto-m-3 notto-p-3 notto-border-danger">Danger Border</div>
+  <div class="notto-m-3 notto-p-3 notto-border-warning">Warning Border</div>
+  <div class="notto-m-3 notto-p-3 notto-border-dashed">Dashed Border</div>
+  <div class="notto-m-3 notto-p-3 notto-border-dotted">Dotted Border</div>
+  <div class="notto-m-3 notto-p-3 notto-border-double">Double Border</div>
+  <div class="notto-m-3 notto-p-3 notto-border-glow">Glowing Border</div>
+  <br>
+  <!-- Radius Section -->
+  <h3>Radius</h3>
+  <div class="notto-m-3 notto-p-3 notto-bg-inactive notto-radius-0">Radius 0px</div>
+  <div class="notto-m-3 notto-p-3 notto-bg-inactive notto-radius-sm">Small Radius</div>
+  <div class="notto-m-3 notto-p-3 notto-bg-inactive notto-radius-md">Medium Radius</div>
+  <div class="notto-m-3 notto-p-3 notto-bg-inactive notto-radius-lg">Large Radius</div>
+  <div class="notto-m-3 notto-p-3 notto-bg-inactive notto-radius-xl">Extra Large Radius</div>
+  <div class="notto-m-3 notto-p-3 notto-bg-inactive notto-radius-pill">Pill Style</div>
+  <div class="notto-m-3 notto-p-3 notto-bg-inactive notto-radius-circle" style="width: 100px; height: 100px;">Circle</div>
+</section>
+<!-- Spacing -->
+<section id="spacing">
+  <h2 class="notto-heading-gradient">Spacing</h2>
+  <!-- Margin -->
+  <h3>Margin</h3>
+  <div class="notto-border-dotted notto-m-5">This box has a margin of 32px.</div>
+  <div class="notto-border-dotted notto-mt-5">This box has a top margin of 32px.</div>
+  <div class="notto-border-dotted notto-mb-5">This box has a bottom margin of 32px.</div>
+  <div class="notto-border-dotted notto-m-auto">This box is centered using margin auto.</div>
+  <!-- Padding -->
+   <br>
+  <h3>Padding</h3>
+  <div class="notto-border-dotted notto-p-5">This box has padding of 32px.</div>
+  <div class="notto-border-dotted notto-pt-5">This box has top padding of 32px.</div>
+  <div class="notto-border-dotted notto-pb-5">This box has bottom padding of 32px.</div>
+  <div class="notto-border-dotted notto-p-auto">This box has automatic padding.</div>
+</section>
+<!-- Images -->
+<section id="images">
+  <h2 class="notto-heading-gradient">Responsive Images</h2>
+  <!-- responsive image -->
+  <img src="https://placehold.co/800x400/c9cff6/FFF" class="notto-img-responsive" alt="Placeholder Image">
+  <!-- Rounded image -->
+   <br>
+  <img src="https://placehold.co/300/c9cff6/FFF" class="notto-img-rounded" alt="Rounded Image">
+  <!-- Circular image -->
+   <br>
+  <img src="https://placehold.co/150/c9cff6/FFF" class="notto-img-circle" alt="Circular Image">
+</section>
+</div>
+<script src="/js/script.js"></script>
+</body>
+</html>
+

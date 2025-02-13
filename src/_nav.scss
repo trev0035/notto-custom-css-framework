@@ -1,0 +1,61 @@
+@use 'variables';
+@use 'sass:map';
+
+.notto-navbar {
+    background: linear-gradient(135deg, map.get(variables.$theme, "primary"), map.get(variables.$theme, "secondary"));
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.notto-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.notto-nav-list li {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative; 
+}
+
+.notto-nav-list li::before {
+    content: none !important;
+}
+
+.notto-nav-list a {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: map.get(variables.$theme, "light");
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.notto-nav-list a.active {
+    background: map.get(variables.$theme, "light");
+    color: map.get(variables.$theme, "primary");
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.notto-nav-list a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    color: map.get(variables.$theme, "light");
+}
+
+
+
+
